@@ -1,0 +1,49 @@
+version: '3.1'
+
+services:
+  web:
+    container_name: faceart-web
+    image: nginx:alpine
+    volumes:
+      - ../src:/src
+      - ../site.conf:/etc/nginx/conf.d/default.conf:ro
+    links:
+      - php
+    ports:
+      - 80:80
+
+  php:
+    container_name: faceart-php
+    build:
+      context: ./php
+    volumes:
+      - ../src:/src
+    links:
+      - mariadb:database
+
+  mariadb:
+    container_name: faceart-mdb
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: faceart
+    volumes:
+      - database-data:/var/lib/mysql
+
+  adminer:
+    container_name: faceart-adm
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+      
+  composer:
+    container_name: faceart-cmp
+    restart: 'no'
+    image: composer
+    command: install
+    volumes:
+      - ..:/app
+
+volumes:
+  database-data:
