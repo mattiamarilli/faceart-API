@@ -19,3 +19,7 @@ make db
 ```sh
 make data
 ```
+> DOWN in devmode with
+```sh
+make devdown
+```
