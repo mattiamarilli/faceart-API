@@ -11,11 +11,11 @@ make devbuild
 ```sh
 make devup
 ```
-> make database with
+> Make database with
 ```sh
 make db
 ```
-> insert test data with
+> Insert test data with
 ```sh
 make data
 ```
