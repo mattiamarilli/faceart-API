@@ -30,13 +30,6 @@ services:
     volumes:
       - database-data:/var/lib/mysql
       - ../sql:/sql
-
-  adminer:
-    container_name: faceart-adm
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
       
   composer:
     container_name: faceart-cmp
