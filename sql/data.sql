@@ -8,7 +8,8 @@ VALUES ('Leoanardo Da Vinci','https://it.wikipedia.org/wiki/Leonardo_da_Vinci');
 INSERT INTO authors(name,infourl) 
 VALUES ('Caravaggio','https://it.wikipedia.org/wiki/Caravaggio');
 
---PAINTINGS
+--PAINTINGS 
+--Every image is hosted with https://imgur.com/
 
 INSERT INTO paintings(name,year,location,imgurl,infourl,description,id_author) 
 VALUES ('Gioconda',1503,'Louvre, Parigi','https://imgur.com/a/gv5zseV','https://it.wikipedia.org/wiki/Gioconda','A wonderful painting by Leonardo',1);
