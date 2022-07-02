@@ -13,7 +13,12 @@ class PaintingsController {
         $data = array_map(function($entry){
             return [
                 'id' => +$entry['id_painting'],
-                'nome' => $entry['name'],
+                'name' => $entry['name'],
+                'year' => $entry['year'],
+                'location' => $entry['location'],
+                'imageurl' => $entry['imageurl'],
+                'infourl' => $entry['infourl'],
+                'description' => $entry['description'],
             ];
         }, $dbres);
         $res->json($data);
