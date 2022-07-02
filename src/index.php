@@ -21,7 +21,7 @@ $klein->respond(function ($request, $response, $service, $app) {
 });
 
 //ROUTES
-$klein->respond('GET', '/test', ['IndexController', 'get']);
+$klein->respond('GET', '/', ['IndexController', 'get']);
 $klein->respond('GET', '/paintings', ['PaintingsController', 'getPaintings']);
 
 //UTILS

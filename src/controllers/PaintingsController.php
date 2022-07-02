@@ -12,7 +12,7 @@ class PaintingsController {
 
         $data = array_map(function($entry){
             return [
-                'id' => +$entry['idpainting'],
+                'id' => +$entry['id_painting'],
                 'nome' => $entry['name'],
             ];
         }, $dbres);

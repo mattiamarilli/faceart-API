@@ -40,5 +40,5 @@ db:
 	docker exec -it faceart-mdb sh -c 'mysql -uroot -pfaceart < /sql/schema.sql'
 
 .PHONY: data
-paintings:
+data:
 	docker exec -it faceart-mdb sh -c 'mysql -uroot -pfaceart < /sql/data.sql'
