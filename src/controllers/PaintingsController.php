@@ -16,7 +16,7 @@ class PaintingsController {
                 'name' => $entry['name'],
                 'year' => $entry['year'],
                 'location' => $entry['location'],
-                'imageurl' => $entry['imageurl'],
+                'imageurl' => $entry['imgurl'],
                 'infourl' => $entry['infourl'],
                 'description' => $entry['description'],
             ];
