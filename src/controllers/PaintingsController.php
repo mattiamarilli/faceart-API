@@ -12,11 +12,11 @@ class PaintingsController {
 
         $data = array_map(function($entry){
             return [
-                'id' => +$entry['id_painting'],
+                'id_painting' => +$entry['id_painting'],
                 'name' => $entry['name'],
                 'year' => $entry['year'],
                 'location' => $entry['location'],
-                'imageurl' => $entry['imgurl'],
+                'imgurl' => $entry['imgurl'],
                 'infourl' => $entry['infourl'],
                 'description' => $entry['description'],
             ];
@@ -38,11 +38,11 @@ class PaintingsController {
 
         $data = array_map(function($entry){
             return [
-                'id' => +$entry['id_painting'],
+                'id_painting' => +$entry['id_painting'],
                 'name' => $entry['name'],
                 'year' => $entry['year'],
                 'location' => $entry['location'],
-                'imageurl' => $entry['imgurl'],
+                'imgurl' => $entry['imgurl'],
                 'infourl' => $entry['infourl'],
                 'description' => $entry['description'],
             ];
