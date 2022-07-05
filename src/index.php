@@ -21,9 +21,15 @@ $klein->respond(function ($request, $response, $service, $app) {
 });
 
 //ROUTES
+
+//paintings
 $klein->respond('GET', '/', ['IndexController', 'get']);
 $klein->respond('GET', '/paintings', ['PaintingsController', 'getPaintings']);
 $klein->respond('POST', '/paintingById', ['PaintingsController', 'getPaintingById']);
+
+//score
+$klein->respond('GET', '/ranking', ['RankingController', 'getRanking']);
+$klein->respond('POST', '/newscore', ['RankingController', 'setNewScore']);
 
 //UTILS
 // Match all endpoints to add Content-Type header

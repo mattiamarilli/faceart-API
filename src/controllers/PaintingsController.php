@@ -25,6 +25,8 @@ class PaintingsController {
 
     }
 
+    //POST /paintingById
+
     static function getPaintingById($req, $res, $service, $app){
         $parameters = $req->body();
 		$parameters = json_decode($parameters, true);

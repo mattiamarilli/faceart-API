@@ -20,7 +20,7 @@ CREATE TABLE paintings (
 	id_author INT NOT NULL REFERENCES authors (id_author)
 );
 
-CREATE TABLE score (
+CREATE TABLE scores (
     nickname varchar(20) PRIMARY KEY NOT NULL,
     score float NOT NULL
 );
