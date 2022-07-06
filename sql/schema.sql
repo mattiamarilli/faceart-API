@@ -24,3 +24,14 @@ CREATE TABLE scores (
     nickname varchar(20) PRIMARY KEY NOT NULL,
     score float NOT NULL
 );
+
+CREATE TABLE tips (
+    id_tip INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    description VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE tips_paintings (
+    id_painting INT NOT NULL REFERENCES paintings (id_painting),
+    id_tip INT NOT NULL REFERENCES tips (id_tip),
+    PRIMARY KEY (id_painting, id_tip)
+);
