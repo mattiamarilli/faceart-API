@@ -31,6 +31,21 @@ class RankingController {
 		}
     }
 
+    static function checkNickName($req, $res, $service, $app){
+        $parameters = $req->body();
+		$paramaters = json_decode($parameters, true);
+		$stm = $app->db->prepare('SELECT * FROM scores WHERE nickname = :nickname');
+		$stm->bindValue(":nickname", $paramaters['nickname']);
+        $stm->execute();
+	    
+        if($stm->rowCount() == 0){
+				$res->json(["message" => "OK", "code" => 200 ]);
+		}
+		else{
+			$res->json(["message" => "Error: nickname already exist", "code" => 500 ]);
+		}
+    }
+
 
 
 }

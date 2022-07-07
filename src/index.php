@@ -29,9 +29,11 @@ $klein->respond('GET', '/', ['IndexController', 'get']);
 $klein->respond('GET', '/paintings', ['PaintingsController', 'getPaintings']);
 $klein->respond('POST', '/paintingById', ['PaintingsController', 'getPaintingById']);
 
-//score
+//ranking
 $klein->respond('GET', '/ranking', ['RankingController', 'getRanking']);
 $klein->respond('POST', '/newscore', ['RankingController', 'setNewScore']);
+$klein->respond('POST', '/checknickname', ['RankingController', 'checkNickName']);
+
 
 //UTILS
 // Match all endpoints to add Content-Type header
