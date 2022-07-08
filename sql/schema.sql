@@ -5,8 +5,8 @@ USE faceart;
 
 CREATE TABLE authors (
     id_author INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(64) NOT NULL,
-    infourl VARCHAR(2000) NOT NULL
+    name_author VARCHAR(64) NOT NULL,
+    infourl_author VARCHAR(2000) NOT NULL
 );
 
 CREATE TABLE paintings (
