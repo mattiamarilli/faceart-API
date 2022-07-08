@@ -30,7 +30,7 @@ class PaintingsController {
 
         $parameters = $req->body();
 		$parameters = json_decode($parameters, true);
-		$stm = $app->db->prepare('SELECT * FROM paintings WHERE id_painting = :id_painting INNER JOIN authors ON paintings.id_author = authors.id_author');
+		$stm = $app->db->prepare('SELECT * FROM paintings INNER JOIN authors ON paintings.id_author = authors.id_author WHERE id_painting = :id_painting');
 		$stm->bindValue(":id_painting", $parameters['id_painting']);
 		$stm->execute();
         $entry = $stm->fetch(PDO::FETCH_ASSOC);
