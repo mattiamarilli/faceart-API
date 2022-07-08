@@ -9,16 +9,16 @@ INSERT INTO authors(name_author,infourl_author)
 VALUES ('Caravaggio','https://it.wikipedia.org/wiki/Caravaggio');
 
 INSERT INTO authors(name_author, infourl_author)
-VALUES ('Vincent Van Gogh', 'https://it.wikipedia.org/wiki/Vincent_van_Gogh')
+VALUES ('Vincent Van Gogh', 'https://it.wikipedia.org/wiki/Vincent_van_Gogh');
 
 INSERT INTO authors(name_author, infourl_author)
-VALUES ('Raffaello Sanzio', 'https://it.wikipedia.org/wiki/Raffaello_Sanzio')
+VALUES ('Raffaello Sanzio', 'https://it.wikipedia.org/wiki/Raffaello_Sanzio');
 
 INSERT INTO authors(name_author, infourl_author)
-VALUES ('Antonello da Messina', 'https://it.wikipedia.org/wiki/Antonello_da_Messina')
+VALUES ('Antonello da Messina', 'https://it.wikipedia.org/wiki/Antonello_da_Messina');
 
 INSERT INTO authors(name_author, infourl_author)
-VALUES ('Tiziano Vecellio', 'https://it.wikipedia.org/wiki/Tiziano_Vecellio')
+VALUES ('Tiziano Vecellio', 'https://it.wikipedia.org/wiki/Tiziano_Vecellio');
 
 --PAINTINGS 
 
