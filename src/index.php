@@ -22,17 +22,19 @@ $klein->respond(function ($request, $response, $service, $app) {
 
 //ROUTES
 
-// /test
+//test
 $klein->respond('GET', '/', ['IndexController', 'get']);
 
 //paintings
 $klein->respond('GET', '/paintings', ['PaintingsController', 'getPaintings']);
 $klein->respond('POST', '/paintingById', ['PaintingsController', 'getPaintingById']);
+$klein->respond('POST', '/tips', ['PaintingsController', 'getTips']);
 
 //ranking
 $klein->respond('GET', '/ranking', ['RankingController', 'getRanking']);
 $klein->respond('POST', '/newscore', ['RankingController', 'setNewScore']);
 $klein->respond('POST', '/checknickname', ['RankingController', 'checkNickName']);
+
 
 
 //UTILS

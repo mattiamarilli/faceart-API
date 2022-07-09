@@ -1,6 +1,6 @@
 USE faceart;
 
---AUTHORS
+-- authors
 
 INSERT INTO authors(name_author,infourl_author) 
 VALUES ('Leoanardo Da Vinci','https://it.wikipedia.org/wiki/Leonardo_da_Vinci');
@@ -29,7 +29,7 @@ VALUES ('Gustave Courbet', 'https://it.wikipedia.org/wiki/Gustave_Courbet');
 INSERT INTO authors(name_author, infourl_author)
 VALUES ('Sandro Botticelli', 'https://it.wikipedia.org/wiki/Sandro_Botticelli');
 
---PAINTINGS 
+-- paintings
 
 INSERT INTO paintings(name,year,location,imgurl,infourl,description,id_author) 
 VALUES ('Gioconda',1503,'Museo del Louvre, Parigi','https://mattiamarilli.github.io/faceapi-img/gioconda.jpeg','https://it.wikipedia.org/wiki/Gioconda','A wonderful painting by Leonardo Da Vinci',1);
@@ -57,3 +57,23 @@ VALUES ('Autoritratto Van Gogh', 1889, "Museo d'Orsay, Parigi", 'https://mattiam
 
 INSERT INTO paintings(name, year, location, imgurl, infourl, description, id_author)
 VALUES ('Nascita di Venere', 1485, 'Galleria degli Uffizi, Firenze', 'https://mattiamarilli.github.io/faceapi-img/venere.jpg', 'https://it.wikipedia.org/wiki/Nascita_di_Venere', 'A wonderful painting by Sandro Botticelli', 9);
+
+-- tips (3 tips for painting)
+
+INSERT INTO tips (description) 
+VALUES ('Ricorda, Lisa Gherardini, la donna ritratta da Leonardo da Vinci posa girata a sinistra, con il volto pressoché frontale, 
+ruotato verso lo spettatore');
+
+INSERT INTO tips (description) 
+VALUES ('Dai ce la puoi fare! Leonardo fu così bravo a dipingere la gioconda che impossibile cogliere 
+tracce delle pennellate grazie al morbidissimo sfumato');
+
+INSERT INTO tips (description) 
+VALUES ('L espressione della gioconda è neutrale in quanto Leonardo voleva introdurre una  profondissima introspezione psicologica');
+
+-- tips_paintings
+
+-- link giocanda with tips n.1
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (1,1);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (1,2);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (1,3);

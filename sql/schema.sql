@@ -27,7 +27,7 @@ CREATE TABLE scores (
 
 CREATE TABLE tips (
     id_tip INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    description VARCHAR(255) NOT NULL
+    description VARCHAR(2000) NOT NULL
 );
 
 CREATE TABLE tips_paintings (

@@ -51,7 +51,25 @@ class PaintingsController {
 
     }
 
+    //POST //tips
+    static function getTips($req, $res, $service, $app){
 
+        $parameters = $req->body();
+		$parameters = json_decode($parameters, true);
+		$stm = $app->db->prepare('SELECT tips.id_tip, description FROM tips INNER JOIN tips_paintings ON tips.id_tip = tips_paintings.id_tip WHERE id_painting = 1');
+		$stm->bindValue(":id_painting", $parameters['id_painting']);
+		$stm->execute();
+        $dbres = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+        $data = array_map(function($entry){
+            return [
+                'id_tip' => +$entry['id_tip'],
+                'description' => $entry['description'],
+            ];
+        }, $dbres);
+        $res->json($data);
+
+    }
 
 
     
