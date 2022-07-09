@@ -56,7 +56,7 @@ class PaintingsController {
 
         $parameters = $req->body();
 		$parameters = json_decode($parameters, true);
-		$stm = $app->db->prepare('SELECT tips.id_tip, description FROM tips INNER JOIN tips_paintings ON tips.id_tip = tips_paintings.id_tip WHERE id_painting = 1');
+		$stm = $app->db->prepare('SELECT tips.id_tip, description FROM tips INNER JOIN tips_paintings ON tips.id_tip = tips_paintings.id_tip WHERE id_painting = :id_painting');
 		$stm->bindValue(":id_painting", $parameters['id_painting']);
 		$stm->execute();
         $dbres = $stm->fetchAll(PDO::FETCH_ASSOC);
