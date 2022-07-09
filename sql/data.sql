@@ -69,7 +69,7 @@ VALUES ('Dai ce la puoi fare! Leonardo fu così bravo a dipingere la gioconda ch
 tracce delle pennellate grazie al morbidissimo sfumato');
 
 INSERT INTO tips (description) 
-VALUES ('L espressione della gioconda è neutrale in quanto Leonardo voleva introdurre una  profondissima introspezione psicologica');
+VALUES ('La gioconda ha un espressione neutrale in quanto Leonardo voleva introdurre una profondissima introspezione psicologica');
 
 -- tips_paintings
 
