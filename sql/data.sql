@@ -61,11 +61,11 @@ VALUES ('Nascita di Venere', 1485, 'Galleria degli Uffizi, Firenze', 'https://ma
 -- tips (3 tips for painting)
 
 INSERT INTO tips (description) 
-VALUES ('Ricorda, Lisa Gherardini, la donna ritratta da Leonardo da Vinci posa girata a sinistra, con il volto pressoché frontale, 
+VALUES ('Ricorda, Lisa Gherardini, la donna ritratta da Leonardo da Vinci posa girata a sinistra, con il volto frontale, 
 ruotato verso lo spettatore');
 
 INSERT INTO tips (description) 
-VALUES ('Dai ce la puoi fare! Leonardo fu così bravo a dipingere la gioconda che impossibile cogliere 
+VALUES ('Dai ce la puoi fare! Leonardo fu particolarmente bravo a dipingere la gioconda che impossibile cogliere 
 tracce delle pennellate grazie al morbidissimo sfumato');
 
 INSERT INTO tips (description) 
