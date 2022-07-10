@@ -33,7 +33,7 @@ INSERT INTO authors(name_author, infourl_author)
 VALUES ('Jan Vermeer', 'https://it.wikipedia.org/wiki/Jan_Vermeer');
 
 INSERT INTO authors(name_author, infourl_author)
-VALUES ('Grant Wood', 'Grant_Wood');
+VALUES ('Grant Wood', 'https://it.wikipedia.org/wiki/Grant_Wood');
 
 -- paintings
 
