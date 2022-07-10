@@ -1,9 +1,12 @@
 <?php
 
 class RankingController {
+    //POST //ranking
     static function getRanking($req, $res, $service, $app){
-
-        $stm = $app->db->prepare('SELECT * FROM scores ORDER BY score DESC');
+        $parameters = $req->body();
+        $paramaters = json_decode($parameters, true);
+        $stm = $app->db->prepare('SELECT * FROM scores WHERE id_painting = :id_painting ORDER BY score DESC');
+        $stm->bindValue(":id_painting", $paramaters['id_painting']);
         $stm->execute();
         $dbres = $stm->fetchAll(PDO::FETCH_ASSOC);
 
@@ -16,6 +19,7 @@ class RankingController {
         $res->json($data);
     }
 
+    //POST //newscore
     static function setNewScore($req, $res, $service, $app){
         $parameters = $req->body();
 		$paramaters = json_decode($parameters, true);
@@ -32,6 +36,7 @@ class RankingController {
 		}
     }
 
+    //POST //checknickname
     static function checkNickName($req, $res, $service, $app){
         $parameters = $req->body();
 		$paramaters = json_decode($parameters, true);
