@@ -21,7 +21,9 @@ CREATE TABLE paintings (
 );
 
 CREATE TABLE scores (
-    nickname varchar(20) PRIMARY KEY NOT NULL,
+    id_score INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id_painting INT NOT NULL REFERENCES paintings (id_painting),
+    nickname varchar(20) NOT NULL,
     score float NOT NULL
 );
 

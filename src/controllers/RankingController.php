@@ -19,9 +19,10 @@ class RankingController {
     static function setNewScore($req, $res, $service, $app){
         $parameters = $req->body();
 		$paramaters = json_decode($parameters, true);
-		$stm = $app->db->prepare('INSERT INTO scores (nickname, score) VALUES (:nickname, :score)');
+		$stm = $app->db->prepare('INSERT INTO scores (id_painting, nickname, score) VALUES (:id_painting, :nickname, :score)');
 		$stm->bindValue(":nickname", $paramaters['nickname']);
 		$stm->bindValue(":score", $paramaters['score']);
+        $stm->bindValue(":id_painting", $paramaters['id_painting']);
 	    
         if($stm->execute()){
 				$res->json(["message" => "OK", "code" => 200 ]);
