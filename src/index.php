@@ -37,6 +37,7 @@ $klein->respond('POST', '/checknickname', ['RankingController', 'checkNickName']
 
 
 
+
 //UTILS
 // Match all endpoints to add Content-Type header
 $klein->respond(function($req, $res) {
