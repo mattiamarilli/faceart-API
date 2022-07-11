@@ -78,8 +78,6 @@ INSERT INTO tips (description)
 VALUES ('La gioconda ha un espressione neutrale in quanto Leonardo voleva introdurre una profondissima introspezione psicologica');
 
 -- tips_paintings
-
--- link giocanda with tips n.1
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (1,1);
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (1,2);
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (1,3);

@@ -1,8 +1,6 @@
 <?php
 
-
 class PaintingsController {
-
     // GET /paintings
     static function getPaintings($req, $res, $service, $app){
 

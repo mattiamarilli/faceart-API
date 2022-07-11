@@ -45,7 +45,7 @@ class RankingController {
         $stm->execute();
 	    
         if($stm->rowCount() == 0){
-				$res->json(["message" => "OK", "code" => 200 ]);
+            $res->json(["message" => "OK", "code" => 200 ]);
 		}
 		else{
 			$res->json(["message" => "Error: nickname already exist", "code" => 500 ]);

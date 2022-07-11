@@ -1,6 +1,9 @@
 <?php
 
+//klein: è una libreria che ci permette di semplificare chiamate HTTP
+
 session_start();
+
 require_once __DIR__ . '/vendor/autoload.php';
 header("Access-Control-Allow-Origin: *");
 header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
@@ -12,8 +15,7 @@ foreach (glob("controllers/*Controller.php") as $filename)
 
 $klein = new \Klein\Klein();
 
-//DATABASE
-
+//connession DATABASE
 $klein->respond(function ($request, $response, $service, $app) {
     $app->register('db', function() {
         return new PDO('mysql:host=database;dbname=faceart', 'root', 'faceart');
@@ -34,9 +36,6 @@ $klein->respond('POST', '/tips', ['PaintingsController', 'getTips']);
 $klein->respond('POST', '/ranking', ['RankingController', 'getRanking']);
 $klein->respond('POST', '/newscore', ['RankingController', 'setNewScore']);
 $klein->respond('POST', '/checknickname', ['RankingController', 'checkNickName']);
-
-
-
 
 //UTILS
 // Match all endpoints to add Content-Type header
