@@ -18,6 +18,14 @@ $ make devbuild
 ```sh
 $ make devup
 ```
+> BUILD prod mode (run alse adminer) with
+```sh
+$ make build
+```
+> RUN in prod mode (run also adminer) with
+```sh
+$ make up
+```
 > Make database with
 ```sh
 $ make db
@@ -27,6 +35,10 @@ $ make db
 $ make data
 ```
 > DOWN in devmode with
+```sh
+$ make devdown
+```
+> DOWN in prodmode with
 ```sh
 $ make devdown
 ```
