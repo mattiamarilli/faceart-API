@@ -9,7 +9,8 @@ Made by [Mattia Marilli](https://github.com/mattiamarilli) and [Giacomo Ponzuoli
 ### Requirement
  - Docker (Version 4.10.1 or latest)
  - GNU Make (Version 3.81 or latest)
-
+ 
+### To make it work
 > BUILD dev mode (run alse adminer) with
 ```sh
 $ make devbuild
