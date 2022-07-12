@@ -7,8 +7,8 @@ Made by [Mattia Marilli](https://github.com/mattiamarilli) and [Giacomo Ponzuoli
  - Adminer available on port **8080**
 
 ### Requirement
- - Docker v. 4.10.1 or latest
- - make
+ - Docker (Version 4.10.1 or latest)
+ - GNU Make (Version 3.81 or latest)
 
 > BUILD dev mode (run alse adminer) with
 ```sh
