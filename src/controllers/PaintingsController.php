@@ -23,6 +23,47 @@ class PaintingsController {
 
     }
 
+     // GET /threerandompaintings
+     static function getThreeTandomPaintings($req, $res, $service, $app){
+
+        $stm = $app->db->prepare('SELECT count(id_painting) AS num_paintings FROM paintings');
+        $stm->execute();
+        $entry = $stm->fetch(PDO::FETCH_ASSOC);
+
+        $rand1 = rand(1, +$entry['num_paintings']);
+        $rand2 = rand(1, +$entry['num_paintings']);
+        $rand3 = rand(1, +$entry['num_paintings']);
+
+        while($rand1 == $rand2 || $rand2 == $rand3 || $rand1 == $rand3)
+        {
+            $rand1 = rand(1, +$entry['num_paintings']);
+            $rand2 = rand(1, +$entry['num_paintings']);
+            $rand3 = rand(1, +$entry['num_paintings']);
+        }
+
+
+        $stm = $app->db->prepare('SELECT * FROM paintings WHERE id_painting = :rand1 OR id_painting = :rand2 OR id_painting = :rand3');
+        $stm->bindValue(":rand1", $rand1);
+        $stm->bindValue(":rand2", $rand2);
+        $stm->bindValue(":rand3", $rand3);
+        $stm->execute();
+        $dbres = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+        $data = array_map(function($entry){
+            return [
+                'id_painting' => +$entry['id_painting'],
+                'name' => $entry['name'],
+                'year' => $entry['year'],
+                'location' => $entry['location'],
+                'imgurl' => $entry['imgurl'],
+                'infourl' => $entry['infourl'],
+                'description' => $entry['description'],
+            ];
+        }, $dbres);
+        $res->json($data);
+
+    }
+
     //POST /getPaintingsById
     static function getPaintingById($req, $res, $service, $app){
 
@@ -69,6 +110,7 @@ class PaintingsController {
 
     }
 
+    
 
     
 }
