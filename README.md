@@ -6,6 +6,10 @@ Made by [Mattia Marilli](https://github.com/mattiamarilli) and [Giacomo Ponzuoli
  - API available on port **80**
  - Adminer available on port **8080**
 
+### Requirement
+ - docker 
+ - make
+
 > BUILD dev mode (run alse adminer) with
 ```sh
 $ make devbuild
