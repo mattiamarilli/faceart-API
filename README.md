@@ -6,23 +6,23 @@ Made by [Mattia Marilli](https://github.com/mattiamarilli) and [Giacomo Ponzuoli
  - API available on port **80**
  - Adminer available on port **8080**
 
-> BUILD  dev mode with
+> BUILD dev mode (run alse adminer) with
 ```sh
-make devbuild
+$ make devbuild
 ```
-> RUN in dev mode with
+> RUN in dev mode (run also adminer) with
 ```sh
-make devup
+$ make devup
 ```
 > Make database with
 ```sh
-make db
+$ make db
 ```
 > Insert test data with
 ```sh
-make data
+$ make data
 ```
 > DOWN in devmode with
 ```sh
-make devdown
+$ make devdown
 ```
