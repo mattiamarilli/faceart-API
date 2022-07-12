@@ -34,7 +34,10 @@ class PaintingsController {
         $rand2 = rand(1, +$entry['num_paintings']);
         $rand3 = rand(1, +$entry['num_paintings']);
 
-        while($rand1 == $rand2 || $rand2 == $rand3 || $rand1 == $rand3)
+        $parameters = $req->body();
+		$parameters = json_decode($parameters, true);
+
+        while($rand1 == $rand2 || $rand2 == $rand3 || $rand1 == $rand3 || $rand1 == $parameters['id_painting'] || $rand2 == $parameters['id_painting'] || $rand3 == $parameters['id_painting'])
         {
             $rand1 = rand(1, +$entry['num_paintings']);
             $rand2 = rand(1, +$entry['num_paintings']);

@@ -29,7 +29,7 @@ $klein->respond('GET', '/', ['IndexController', 'get']);
 
 //paintings
 $klein->respond('GET', '/paintings', ['PaintingsController', 'getPaintings']);
-$klein->respond('GET', '/threerandompaintings', ['PaintingsController', 'getThreeTandomPaintings']);
+$klein->respond('POST', '/threerandompaintings', ['PaintingsController', 'getThreeTandomPaintings']);
 $klein->respond('POST', '/paintingById', ['PaintingsController', 'getPaintingById']);
 $klein->respond('POST', '/tips', ['PaintingsController', 'getTips']);
 
