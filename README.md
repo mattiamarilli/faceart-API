@@ -26,11 +26,11 @@ $ make build
 ```sh
 $ make up
 ```
-> Make database with
+> MAKE DATABASE with
 ```sh
 $ make db
 ```
-> Insert test data with
+> INSERT TEST DATA with
 ```sh
 $ make data
 ```
