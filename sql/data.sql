@@ -140,6 +140,57 @@ VALUES ('The subject is not strictly the "Birth of Venus", a title given to the 
 nineteenth century (though given as the subject by Vasari), but the next scene in her story, where she arrives on land, 
 blown by the wind');
 
+--Il ritratto d'uomo
+--16
+INSERT INTO tips(description)
+VALUES ('The protagonist of the portrait faces right');
+
+--17
+INSERT INTO tips(description)
+VALUES ('The look hints at a serious expression and the lips are tightened');
+
+--18
+INSERT INTO tips(description)
+VALUES ('His face, on the other hand, is slightly rotated towards the front of the painting');
+
+--Ragazza col turbante
+--19
+INSERT INTO tips(description)
+VALUES ('Turn your head three-quarters towards the viewer, in favor of the light falling from the left.');
+
+--20
+INSERT INTO tips(description)
+VALUES ('Fleshy red lips parting in an astonished sketch of a smile, thin, straight nose, eyes');
+
+--21
+INSERT INTO tips(description)
+VALUES ("Don't stand too close to the webcam");
+
+--American gotic
+--22
+INSERT INTO tips(description)
+VALUES ("The painting portrays a couple of old gentlemen standing half-length in front of a rural-style wooden house.");
+
+--23
+INSERT INTO tips(description)
+VALUES ("The man holds a pitchfork in his right hand and looks at the viewer");
+
+--24
+INSERT INTO tips(description)
+VALUES ("He has a restless expression and typically wear colonial clothes");
+
+--Ritratto di Elisabetta Gonzaga
+--25
+INSERT INTO tips(description)
+VALUES ("She is portrayed half-length in a rather unusual frontal pose with an archaic flavor");
+
+--26
+INSERT INTO tips(description)
+VALUES ("The face turned slightly to the right, the eyes downwards, in the opposite direction.");
+
+--27
+INSERT INTO tips(description)
+VALUES ("Elizabeth has a reddened complexion, her hair is loose, two curls in the shape of a tempting snake peek out over her shoulders");
 
 -- tips_paintings
 
@@ -168,3 +219,23 @@ INSERT INTO tips_paintings (id_painting, id_tip) VALUES (4,12);
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (5,13);
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (5,14);
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (5,15);
+
+--Il ritratto d'uomo
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (6,16);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (6,17);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (6,18);
+
+--La ragazza col turbante
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (7,19);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (7,20);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (7,21);
+
+--American Gotic
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (8,22);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (8,23);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (8,24);
+
+--Ritratto di Elisabetta di Gonzaga
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (9,25);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (9,26);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (9,27);
