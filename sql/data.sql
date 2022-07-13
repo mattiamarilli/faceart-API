@@ -110,6 +110,37 @@ INSERT INTO tips (description)
 VALUES ('The composition of the picture, placing the figure in a loggia opening out onto a landscape, 
 the three quarter length format was apparently inspired by the Mona Lisa');
 
+--La Bella
+--10
+INSERT INTO tips (description) 
+VALUES ('The woman corresponds perfectly to all the ideals of beauty of the time with possibly the only exception of only medium blond hair');
+
+--11
+INSERT INTO tips (description) 
+VALUES ('She points with her left hand to a zibellino draped over her right forearm');
+
+--12
+INSERT INTO tips (description) 
+VALUES ('The portrait represents a young beauty in a blue dress with decollete and rich gold ornaments against a dark background');
+
+--Nascita di Venere
+--13
+INSERT INTO tips (description) 
+VALUES ('There is heavy use of gold as a pigment for highlights, on hair, wings, textiles, the shell and the landscape. 
+This was all apparently applied after the painting was framed');
+
+--14
+INSERT INTO tips (description) 
+VALUES ('Botticelli art was never fully committed to naturalism; in comparison to his contemporary Domenico Ghirlandaio, 
+Botticelli seldom gave weight and volume to his figures and rarely used a deep perspectival space');
+
+--15
+INSERT INTO tips (description) 
+VALUES ('The subject is not strictly the "Birth of Venus", a title given to the painting only in the 
+nineteenth century (though given as the subject by Vasari), but the next scene in her story, where she arrives on land, 
+blown by the wind');
+
+
 -- tips_paintings
 
 --Gioconda
@@ -127,3 +158,13 @@ INSERT INTO tips_paintings (id_painting, id_tip) VALUES (2,6);
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (3,7);
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (3,8);
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (3,9);
+
+--La Bella
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (4,10);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (4,11);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (4,12);
+
+--Nascita di Venere
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (5,13);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (5,14);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (5,15);
