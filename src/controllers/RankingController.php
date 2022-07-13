@@ -5,13 +5,14 @@ class RankingController {
     static function getRanking($req, $res, $service, $app){
         $parameters = $req->body();
         $paramaters = json_decode($parameters, true);
-        $stm = $app->db->prepare('SELECT * FROM scores WHERE id_painting = :id_painting ORDER BY score DESC');
+        $stm = $app->db->prepare('SELECT ROW_NUMBER() OVER(ORDER BY score DESC) AS row, score, nickname FROM scores WHERE id_painting = :id_painting ');
         $stm->bindValue(":id_painting", $paramaters['id_painting']);
         $stm->execute();
         $dbres = $stm->fetchAll(PDO::FETCH_ASSOC);
 
         $data = array_map(function($entry){
             return [
+                'row' => $entry['row'],
                 'nickname' => $entry['nickname'],
                 'score' => +$entry['score']
             ];
