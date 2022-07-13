@@ -1,4 +1,4 @@
-DROP SCHEMA faceart;
+DROP SCHEMA IF EXISTS faceart;
 CREATE SCHEMA faceart;
 
 USE faceart;
