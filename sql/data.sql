@@ -66,18 +66,64 @@ VALUES ('Ritratto di Elisabetta Gonzaga', 1505, "Galleria degli Uffizi, Firenze"
 
 -- tips (3 tips for painting)
 
+--Gioconda
+--1
 INSERT INTO tips (description) 
-VALUES ('Ricorda, Lisa Gherardini, la donna ritratta da Leonardo da Vinci posa girata a sinistra, con il volto frontale, 
-ruotato verso lo spettatore');
+VALUES ('Remember, Lisa Gherardini, the woman portrayed by Leonardo da Vinci poses turned left, with the front face,
+rotated towards the viewer');
 
+--2
 INSERT INTO tips (description) 
-VALUES ('Dai ce la puoi fare! Leonardo fu particolarmente bravo a dipingere la gioconda che impossibile cogliere 
-tracce delle pennellate grazie al morbidissimo sfumato');
+VALUES ('Come on you can do it! Leonardo was particularly good at painting the Giocanda. It is not possible 
+to distinguish the traces of the brush strokes');
 
+--3
 INSERT INTO tips (description) 
-VALUES ('La gioconda ha un espressione neutrale in quanto Leonardo voleva introdurre una profondissima introspezione psicologica');
+VALUES ('The gioconda has a neutral expression since Leonardo wanted to introduce a very deep psychological introspection');
+
+--Scudo con testa di medusa
+--4
+INSERT INTO tips (description) 
+VALUES ('The painting depicts the severed head of Medusa, a monster described as a woman with 
+bronze hands and golden wings who had countless venomous snakes on her head in place of her own hair');
+
+--5
+INSERT INTO tips (description) 
+VALUES ('The painting was commissioned as a commemoration shield by Cardinal Francesco Maria Del Monte, 
+who wanted to give it to the Grand Duke of Tuscany, Ferdinando I dei Medici');
+
+--6
+INSERT INTO tips (description) 
+VALUES ('The level of tenebrism and realism are well portrayed in this painting, creating a three-dimensional appearance');
+
+--Dama col liocorno
+--7
+INSERT INTO tips (description) 
+VALUES ('It was in the course of this work that overpainting was removed, revealing the unicorn');
+
+--8
+INSERT INTO tips (description) 
+VALUES ('The painting was originally oil on panel, and was transferred to canvas during conservation work in 1934');
+
+--9
+INSERT INTO tips (description) 
+VALUES ('The composition of the picture, placing the figure in a loggia opening out onto a landscape, 
+the three quarter length format was apparently inspired by the Mona Lisa');
 
 -- tips_paintings
+
+--Gioconda
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (1,1);
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (1,2);
 INSERT INTO tips_paintings (id_painting, id_tip) VALUES (1,3);
+
+
+--Scudo con testa di Medusa
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (2,4);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (2,5);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (2,6);
+
+--Dama col liocorno
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (3,7);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (3,8);
+INSERT INTO tips_paintings (id_painting, id_tip) VALUES (3,9);
